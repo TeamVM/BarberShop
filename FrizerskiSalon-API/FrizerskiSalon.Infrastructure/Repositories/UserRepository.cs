@@ -5,7 +5,6 @@ using FrizerskiSalon.Infrastructure.Configuration;
 using FrizerskiSalon.Infrastructure.Models;
 using Microsoft.Extensions.Options;
 using Npgsql;
-using System.Data.SqlClient;
 
 namespace FrizerskiSalon.Infrastructure.Repositories;
 
