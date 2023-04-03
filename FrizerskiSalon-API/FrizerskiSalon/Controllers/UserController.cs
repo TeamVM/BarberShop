@@ -19,7 +19,7 @@ public class UserController : ControllerBase
 
     [HttpPost]
     public async Task<IActionResult> CreateUser(UserDTO user) =>
-        Ok(await userService.CreateUsers(new UserModel()
+        Ok(await userService.CreateUser(new UserModel()
         {
             Name= user.Name,
             Email = user.Email,

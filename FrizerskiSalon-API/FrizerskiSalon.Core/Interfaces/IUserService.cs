@@ -4,5 +4,5 @@ namespace FrizerskiSalon.Core.Interfaces;
 
 public interface IUserService
 {
-    public Task<Guid> CreateUsers(UserModel user);
+    public Task<Guid> CreateUser(UserModel user);
 }

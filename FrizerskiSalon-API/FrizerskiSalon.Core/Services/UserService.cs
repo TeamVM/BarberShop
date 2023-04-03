@@ -12,6 +12,6 @@ public class UserService : IUserService
         this.userReository = userReository;
     }
 
-    public async Task<Guid> CreateUsers(UserModel user) =>
-        await userReository.CreateUsers(user);
+    public async Task<Guid> CreateUser(UserModel user) =>
+        await userReository.CreateUser(user);
 }

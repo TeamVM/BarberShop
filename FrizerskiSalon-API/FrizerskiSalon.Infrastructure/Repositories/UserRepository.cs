@@ -18,7 +18,7 @@ public class UserRepository : IUserRepository
         this.confugiration = confugiration;
     }
 
-    public async Task<Guid> CreateUsers(UserModel user)
+    public async Task<Guid> CreateUser(UserModel user)
     {
         // Logika za dobavljanje barber_shop_id-a
         // var barberShopId = await GetBarberShopIdFromDb();
@@ -30,6 +30,7 @@ public class UserRepository : IUserRepository
             Surname = user.Surname,
             Phone = user.Phone,
             Email = user.Email,
+            // Za testiranje - obrisi kasnije ili dodaj logiku da dobavlja pravi BarberShopId
             BarberShopId = Guid.Parse("141795c2-d265-11ed-b69f-fb6f22e8114e")
         };
 
