@@ -1,0 +1,12 @@
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Core\bin\Debug\net6.0\FrizerskiSalon.Core.deps.json
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Core\bin\Debug\net6.0\FrizerskiSalon.Core.dll
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Core\bin\Debug\net6.0\FrizerskiSalon.Core.pdb
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\FrizerskiSalon.Core.csproj.AssemblyReference.cache
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\FrizerskiSalon.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\FrizerskiSalon.Core.AssemblyInfoInputs.cache
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\FrizerskiSalon.Core.AssemblyInfo.cs
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\FrizerskiSalon.Core.csproj.CoreCompileInputs.cache
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\FrizerskiSalon.Core.dll
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\refint\FrizerskiSalon.Core.dll
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\FrizerskiSalon.Core.pdb
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\ref\FrizerskiSalon.Core.dll

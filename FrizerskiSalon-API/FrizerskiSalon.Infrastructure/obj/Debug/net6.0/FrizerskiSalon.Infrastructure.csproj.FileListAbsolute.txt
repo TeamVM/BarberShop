@@ -1,0 +1,15 @@
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Infrastructure\bin\Debug\net6.0\FrizerskiSalon.Infrastructure.deps.json
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Infrastructure\bin\Debug\net6.0\FrizerskiSalon.Infrastructure.dll
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Infrastructure\bin\Debug\net6.0\FrizerskiSalon.Infrastructure.pdb
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Infrastructure\bin\Debug\net6.0\FrizerskiSalon.Core.dll
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Infrastructure\bin\Debug\net6.0\FrizerskiSalon.Core.pdb
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Infrastructure\obj\Debug\net6.0\FrizerskiSalon.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Infrastructure\obj\Debug\net6.0\FrizerskiSalon.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Infrastructure\obj\Debug\net6.0\FrizerskiSalon.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Infrastructure\obj\Debug\net6.0\FrizerskiSalon.Infrastructure.AssemblyInfo.cs
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Infrastructure\obj\Debug\net6.0\FrizerskiSalon.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Infrastructure\obj\Debug\net6.0\FrizerskiSalon.Infrastructure.csproj.CopyComplete
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Infrastructure\obj\Debug\net6.0\FrizerskiSalon.Infrastructure.dll
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Infrastructure\obj\Debug\net6.0\refint\FrizerskiSalon.Infrastructure.dll
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Infrastructure\obj\Debug\net6.0\FrizerskiSalon.Infrastructure.pdb
+C:\Users\Gligorici\Desktop\FrizerskiSalon\FrizerskiSalon-API\FrizerskiSalon.Infrastructure\obj\Debug\net6.0\ref\FrizerskiSalon.Infrastructure.dll
