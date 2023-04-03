@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gligorici\\Desktop\\FrizerskiSalon\\FrizerskiSalon-API\\FrizerskiSalon.Core\\FrizerskiSalon.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Gligorici\\Desktop\\DiplomskiGit\\BarberShop\\FrizerskiSalon-API\\FrizerskiSalon.Core\\FrizerskiSalon.Core.csproj",
       "projectName": "FrizerskiSalon.Core",
-      "projectPath": "C:\\Users\\Gligorici\\Desktop\\FrizerskiSalon\\FrizerskiSalon-API\\FrizerskiSalon.Core\\FrizerskiSalon.Core.csproj",
+      "projectPath": "C:\\Users\\Gligorici\\Desktop\\DiplomskiGit\\BarberShop\\FrizerskiSalon-API\\FrizerskiSalon.Core\\FrizerskiSalon.Core.csproj",
       "packagesPath": "C:\\Users\\Gligorici\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gligorici\\Desktop\\FrizerskiSalon\\FrizerskiSalon-API\\FrizerskiSalon.Core\\obj\\",
+      "outputPath": "C:\\Users\\Gligorici\\Desktop\\DiplomskiGit\\BarberShop\\FrizerskiSalon-API\\FrizerskiSalon.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gligorici\\AppData\\Roaming\\NuGet\\NuGet.Config",

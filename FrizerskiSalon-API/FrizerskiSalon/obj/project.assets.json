@@ -1318,11 +1318,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gligorici\\Desktop\\FrizerskiSalon\\FrizerskiSalon-API\\FrizerskiSalon\\FrizerskiSalon.csproj",
+      "projectUniqueName": "C:\\Users\\Gligorici\\Desktop\\DiplomskiGit\\BarberShop\\FrizerskiSalon-API\\FrizerskiSalon\\FrizerskiSalon.csproj",
       "projectName": "FrizerskiSalon",
-      "projectPath": "C:\\Users\\Gligorici\\Desktop\\FrizerskiSalon\\FrizerskiSalon-API\\FrizerskiSalon\\FrizerskiSalon.csproj",
+      "projectPath": "C:\\Users\\Gligorici\\Desktop\\DiplomskiGit\\BarberShop\\FrizerskiSalon-API\\FrizerskiSalon\\FrizerskiSalon.csproj",
       "packagesPath": "C:\\Users\\Gligorici\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gligorici\\Desktop\\FrizerskiSalon\\FrizerskiSalon-API\\FrizerskiSalon\\obj\\",
+      "outputPath": "C:\\Users\\Gligorici\\Desktop\\DiplomskiGit\\BarberShop\\FrizerskiSalon-API\\FrizerskiSalon\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gligorici\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1339,11 +1339,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Gligorici\\Desktop\\FrizerskiSalon\\FrizerskiSalon-API\\FrizerskiSalon.Core\\FrizerskiSalon.Core.csproj": {
-              "projectPath": "C:\\Users\\Gligorici\\Desktop\\FrizerskiSalon\\FrizerskiSalon-API\\FrizerskiSalon.Core\\FrizerskiSalon.Core.csproj"
+            "C:\\Users\\Gligorici\\Desktop\\DiplomskiGit\\BarberShop\\FrizerskiSalon-API\\FrizerskiSalon.Core\\FrizerskiSalon.Core.csproj": {
+              "projectPath": "C:\\Users\\Gligorici\\Desktop\\DiplomskiGit\\BarberShop\\FrizerskiSalon-API\\FrizerskiSalon.Core\\FrizerskiSalon.Core.csproj"
             },
-            "C:\\Users\\Gligorici\\Desktop\\FrizerskiSalon\\FrizerskiSalon-API\\FrizerskiSalon.Infrastructure\\FrizerskiSalon.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Gligorici\\Desktop\\FrizerskiSalon\\FrizerskiSalon-API\\FrizerskiSalon.Infrastructure\\FrizerskiSalon.Infrastructure.csproj"
+            "C:\\Users\\Gligorici\\Desktop\\DiplomskiGit\\BarberShop\\FrizerskiSalon-API\\FrizerskiSalon.Infrastructure\\FrizerskiSalon.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Gligorici\\Desktop\\DiplomskiGit\\BarberShop\\FrizerskiSalon-API\\FrizerskiSalon.Infrastructure\\FrizerskiSalon.Infrastructure.csproj"
             }
           }
         }
