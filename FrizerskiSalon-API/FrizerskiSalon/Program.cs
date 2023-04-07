@@ -6,6 +6,7 @@ using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 // Add services to the container.
 builder.Services.Configure<ConnectionConfiguration>(builder.Configuration.GetSection("ConnectionStrings")); //citanje connectionstringa iz appsetings.json
 builder.Services.AddScoped<IUserService, UserService>();
@@ -18,7 +19,27 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        builder =>
+        {
+            builder.WithOrigins("http://localhost",
+                "http://localhost:4200",
+                "http://localhost:5125")
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .SetIsOriginAllowedToAllowWildcardSubdomains();
+        });
+});
+
+
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -27,7 +48,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthorization();
 

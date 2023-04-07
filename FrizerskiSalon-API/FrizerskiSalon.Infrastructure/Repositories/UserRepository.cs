@@ -52,5 +52,5 @@ public class UserRepository : IUserRepository
 
         await connection.ExecuteAsync(sql, parameters);
         return userId;
-    }
+     }
 }
