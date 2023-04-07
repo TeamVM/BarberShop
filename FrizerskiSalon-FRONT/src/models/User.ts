@@ -5,14 +5,14 @@ export class Worker{
     name: string;
     surname: string;
     phone: number;
-    email: EmailValidator;
+    email: string;
 
 
-    constructor(userID: number, name: string, surname: string, phone: number, email: EmailValidator){
+    constructor(userID: number, name: string, surname: string, phone: number, email: string){
         this.userID = userID;
         this.name = name;
         this.surname = surname;
         this.phone = phone;
-       this.email = email;
+       this.email = email; 
     }
 }

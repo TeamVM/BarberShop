@@ -1,0 +1,12 @@
+.bg-image {
+    background-image:url("../../assets/img/download.jpg");
+    background-repeat: no-repeat;
+    background-size:auto;
+    background-position: center;
+    height: 500px; /* ili visinu po želji */
+  }
+  
+  .container {
+    text-align: center;
+    padding-top: 50px; /* ili udaljenost po želji od vrha */
+  }
