@@ -9,6 +9,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { HomeComponent } from './home/home.component';
 import { PriceComponent } from './price/price.component';
 import { LoginComponent } from './login/login.component';
+import { AuthService } from 'src/service/auth.service';
+import { JwtModule } from '@auth0/angular-jwt';
 
 
 @NgModule({
@@ -25,8 +27,22 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    JwtModule.forRoot({
+       config: {
+          tokenGetter,
+          allowedDomains: ['localhost:5125'],
+          disallowedRoutes: ['localhost:5125/api/auth']
+       }
+    })
   ],
-  providers: [],
+  providers: [
+    AuthService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+export function tokenGetter() {
+  return localStorage.getItem('token');
+}
