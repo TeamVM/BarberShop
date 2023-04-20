@@ -24,7 +24,7 @@ public class UserRepository : IUserRepository
         // Logika za dobavljanje barber_shop_id-a
         // var barberShopId = await GetBarberShopIdFromDb();
 
-        var entity = new User()
+        var entity = new DMUser()
         {
             Id = Guid.NewGuid(),
             Name = user.Name,
@@ -62,18 +62,18 @@ public class UserRepository : IUserRepository
     {
         try
         {
-
-        using var connection = new NpgsqlConnection(confugiration.Value.MyPostgresConnection);
-        var query = @"
+            using var connection = new NpgsqlConnection(confugiration.Value.MyPostgresConnection);
+            var query = @"
             SELECT Id, Name, Password, Phone, Email, barber_shop_id, Role
             FROM Users
             WHERE Email = @Email AND Password = @Password
-        ";
+            ";
 
-        var parameters = new { Email = email, Password = password };
+            var parameters = new { Email = email, Password = password };
 
-        return await connection.QuerySingleOrDefaultAsync<UserModel>(query, parameters);
-        }catch(Exception ex)
+            return await connection.QuerySingleOrDefaultAsync<UserModel>(query, parameters);
+        }
+        catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
             return new UserModel();

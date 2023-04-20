@@ -22,3 +22,15 @@ C:\Users\Gligorici\Desktop\DiplomskiGit\BarberShop\FrizerskiSalon-API\FrizerskiS
 C:\Users\Gligorici\Desktop\DiplomskiGit\BarberShop\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\refint\FrizerskiSalon.Core.dll
 C:\Users\Gligorici\Desktop\DiplomskiGit\BarberShop\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\FrizerskiSalon.Core.pdb
 C:\Users\Gligorici\Desktop\DiplomskiGit\BarberShop\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\ref\FrizerskiSalon.Core.dll
+C:\Users\GligoricST\Desktop\Bricashop\BarberShop\FrizerskiSalon-API\FrizerskiSalon.Core\bin\Debug\net6.0\FrizerskiSalon.Core.deps.json
+C:\Users\GligoricST\Desktop\Bricashop\BarberShop\FrizerskiSalon-API\FrizerskiSalon.Core\bin\Debug\net6.0\FrizerskiSalon.Core.dll
+C:\Users\GligoricST\Desktop\Bricashop\BarberShop\FrizerskiSalon-API\FrizerskiSalon.Core\bin\Debug\net6.0\FrizerskiSalon.Core.pdb
+C:\Users\GligoricST\Desktop\Bricashop\BarberShop\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\FrizerskiSalon.Core.csproj.AssemblyReference.cache
+C:\Users\GligoricST\Desktop\Bricashop\BarberShop\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\FrizerskiSalon.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\GligoricST\Desktop\Bricashop\BarberShop\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\FrizerskiSalon.Core.AssemblyInfoInputs.cache
+C:\Users\GligoricST\Desktop\Bricashop\BarberShop\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\FrizerskiSalon.Core.AssemblyInfo.cs
+C:\Users\GligoricST\Desktop\Bricashop\BarberShop\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\FrizerskiSalon.Core.csproj.CoreCompileInputs.cache
+C:\Users\GligoricST\Desktop\Bricashop\BarberShop\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\FrizerskiSalon.Core.dll
+C:\Users\GligoricST\Desktop\Bricashop\BarberShop\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\refint\FrizerskiSalon.Core.dll
+C:\Users\GligoricST\Desktop\Bricashop\BarberShop\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\FrizerskiSalon.Core.pdb
+C:\Users\GligoricST\Desktop\Bricashop\BarberShop\FrizerskiSalon-API\FrizerskiSalon.Core\obj\Debug\net6.0\ref\FrizerskiSalon.Core.dll

@@ -82,4 +82,35 @@ public class UserController : ControllerBase
 
         return Ok(new { token = tokenHandler.WriteToken(token), user });
     }
+
+    [HttpPost("reserveTerm")]
+    public async Task<IActionResult> ReserveTerm(TermDTO term)
+    {
+        try
+        {
+            if (term.UserId.HasValue && term.ServiceID.HasValue)
+            {
+                bool success = await userService.ReserveTerm(
+                    term.UserId.Value,
+                    term.TermID,
+                    term.ServiceID.Value,
+                    term.Xmin);
+                //xmin je za concurrency check - 
+
+                return Ok(new
+                {
+                    Success = success,
+                    Message = "Term is already reserved."
+                });
+                //opisi error
+            }
+
+            return BadRequest();
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+            //log
+        }
+    }
 }

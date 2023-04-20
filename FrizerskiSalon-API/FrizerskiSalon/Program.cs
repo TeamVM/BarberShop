@@ -2,6 +2,7 @@ using FrizerskiSalon.Core.Interfaces;
 using FrizerskiSalon.Core.Services;
 using FrizerskiSalon.Infrastructure.Configuration;
 using FrizerskiSalon.Infrastructure.Repositories;
+using FrizerskiSalon.Models.Configuration;
 using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 // Add services to the container.
 builder.Services.Configure<ConnectionConfiguration>(builder.Configuration.GetSection("ConnectionStrings")); //citanje connectionstringa iz appsetings.json
+builder.Services.Configure<AppConfig>(builder.Configuration.GetSection("AppConfig"));
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddControllers();

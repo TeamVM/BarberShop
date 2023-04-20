@@ -1,6 +1,6 @@
 ﻿namespace FrizerskiSalon.Infrastructure.Models;
 
-public class User
+public class DMUser
 {
     public Guid Id { get; set; }
     public string? Name { get; set; }
