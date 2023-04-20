@@ -16,9 +16,9 @@ namespace FrizerskiSalon.Infrastructure.Models
 
         public TimeOnly StartTime { get; set; }
 
-        public Guid UserId { get; set; }
+        public Guid? UserId { get; set; } 
 
-        public Guid ServiceID { get; set; }
+        public Guid? ServiceID { get; set; }
 
         public bool Busy { get; set; }
 

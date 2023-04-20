@@ -23,7 +23,7 @@ namespace FrizerskiSalon.Infrastructure.Repositories
         }
         //koristicu hangfire  i kreiracu job koji ce jednom nedeljno kreirati termine za sop
         //dovlacenje usluga po sopu kao za termine slicno
-
+        //
         public async Task<Guid> CreateTerm(Term term)
         {
             // Logika za dobavljanje barber_shop_id-a

@@ -18,7 +18,7 @@ public class UserService : IUserService
     {
         this.userReository = userReository;
         this.termRepository = termRepository;
-        this.appConfig = appConfig.Value
+        this.appConfig = appConfig.Value;
     }
 
     public async Task<Guid> CreateUser(UserModel user) =>
