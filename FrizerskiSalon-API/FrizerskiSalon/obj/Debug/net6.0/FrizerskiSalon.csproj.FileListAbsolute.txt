@@ -100,3 +100,8 @@ C:\Users\Gligorici\Desktop\DiplomskiGit\BarberShop\FrizerskiSalon-API\FrizerskiS
 C:\Users\Gligorici\Desktop\DiplomskiGit\BarberShop\FrizerskiSalon-API\FrizerskiSalon\obj\Debug\net6.0\FrizerskiSalon.pdb
 C:\Users\Gligorici\Desktop\DiplomskiGit\BarberShop\FrizerskiSalon-API\FrizerskiSalon\obj\Debug\net6.0\FrizerskiSalon.genruntimeconfig.cache
 C:\Users\Gligorici\Desktop\DiplomskiGit\BarberShop\FrizerskiSalon-API\FrizerskiSalon\obj\Debug\net6.0\ref\FrizerskiSalon.dll
+C:\Users\Gligorici\Desktop\DiplomskiGit\BarberShop\FrizerskiSalon-API\FrizerskiSalon\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Gligorici\Desktop\DiplomskiGit\BarberShop\FrizerskiSalon-API\FrizerskiSalon\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Gligorici\Desktop\DiplomskiGit\BarberShop\FrizerskiSalon-API\FrizerskiSalon\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Gligorici\Desktop\DiplomskiGit\BarberShop\FrizerskiSalon-API\FrizerskiSalon\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Gligorici\Desktop\DiplomskiGit\BarberShop\FrizerskiSalon-API\FrizerskiSalon\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

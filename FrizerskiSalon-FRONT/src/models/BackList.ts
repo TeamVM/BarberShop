@@ -1,4 +1,4 @@
-export class BackList{
+export interface BackList {
     backListID: number;
     userID: number;
 }

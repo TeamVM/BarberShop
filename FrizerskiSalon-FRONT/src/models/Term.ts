@@ -1,6 +1,6 @@
 import { Time } from "@angular/common";
 
-export class Term{
+export interface Term {
     termID: number;
     barberShopID: number;
     dateTime: Date;
@@ -10,4 +10,10 @@ export class Term{
     serviceID: number;
     busy: boolean;
     workerID: number;
+}
+
+export interface TermSimple {
+    booked: boolean;
+    startTime: Date; // datum i vreme pocetka
+    duration: number; //trajanje termina u minutima
 }

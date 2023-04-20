@@ -9,7 +9,7 @@ public class UserDTO
     public string? Name { get; set; }
     [Required]
     [StringLength(50, MinimumLength = 4, ErrorMessage = "Pasword must be between 4 and 50 character")]
-    public string? Surname { get; set; }//password
+    public string? Password { get; set; }//password
     [RegularExpression(@"^[\d]{8,14}$", ErrorMessage = "Phone number should be between 8 and 14 digits")]
     public string? Phone { get; set; }
     [Required(ErrorMessage = "Email is required")]

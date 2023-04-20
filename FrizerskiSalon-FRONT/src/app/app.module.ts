@@ -11,6 +11,10 @@ import { PriceComponent } from './price/price.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from 'src/service/auth.service';
 import { JwtModule } from '@auth0/angular-jwt';
+import { TermComponent } from './term/term.component';
+import { ContactComponent } from './contact/contact.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { TermCardComponent } from './term-card/term-card.component';
 
 
 @NgModule({
@@ -20,8 +24,12 @@ import { JwtModule } from '@auth0/angular-jwt';
     HomeComponent,
     PriceComponent,
     LoginComponent,
+    TermComponent,
+    ContactComponent,
+    TermCardComponent,
   ],
   imports: [
+    LeafletModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

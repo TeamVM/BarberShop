@@ -1,7 +1,9 @@
-export class Service{
-    serviceID: number;
+import { TermSimple } from "./Term";
+
+export interface BarberService {
+    id: number;
     name: string;
     duration: number;
-    price: number
-    barberShopID: number;
+    img: string;
+    terms: TermSimple[]
 }

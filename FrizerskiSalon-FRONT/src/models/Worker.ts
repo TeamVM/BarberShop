@@ -1,8 +1,8 @@
-export interface Worker{
+import { TermSimple } from "./Term";
+
+export interface BarberWorker {
     workerID: number;
     name: string;
-    surname: string;
-    jmbg: number;
     img: string;
-    barberShopID: number;
+    terms: TermSimple[]
 }

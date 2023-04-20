@@ -34,7 +34,7 @@ public class UserController : ControllerBase
             Name = user.Name,
             Email = user.Email,
             Phone = user.Phone,
-            Surname = user.Surname
+            Password = user.Password
         };
 
         var createdUser = await userService.CreateUser(userModel);
@@ -43,17 +43,22 @@ public class UserController : ControllerBase
     }
 
     [HttpPost("login")]
-    public async Task<IActionResult> Login(UserDTO userForLoginDto)
+    public async Task<IActionResult> Login(LoginUserDTO loginUser)
     {
-        // Obrisi komentare kad implementiras logiku da pokupis user-a iz baze
-        //var userFromRepo = await _repo.Login(userForLoginDto.Username, userForLoginDto.Password);
-        //if (userFromRepo == null)
-        //    return Unauthorized();
+        var userFromRepo = new UserModel();
+        if (loginUser.Email != null && loginUser.Password != null)
+        {
+            userFromRepo = await userService.LoginUser(loginUser.Email, loginUser.Password);
+        }
+        else
+        {
+            return BadRequest(ModelState);  
+        }
 
         var claims = new[]
         {
-            new Claim(ClaimTypes.NameIdentifier, string.Empty),
-            new Claim(ClaimTypes.Name, string.Empty)
+            new Claim(ClaimTypes.NameIdentifier, userFromRepo.Email),
+            new Claim(ClaimTypes.Role, userFromRepo.Role)
         };
 
         var key = new SymmetricSecurityKey(Encoding.UTF8
@@ -72,8 +77,8 @@ public class UserController : ControllerBase
 
         var token = tokenHandler.CreateToken(tokenDescriptor);
 
-        var user = new UserDTO();
-        //var user = _mapper.Map<UserForListDto>(userFromRepo);
+
+        var user = userFromRepo;        //var user = _mapper.Map<UserForListDto>(userFromRepo);
 
         return Ok(new { token = tokenHandler.WriteToken(token), user });
     }

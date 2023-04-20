@@ -1,0 +1,25 @@
+/* Primer stilova za parent kontejner i kartice */
+.dropdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    text-decoration-color: crimson;
+    margin-top: 10px;
+    height: 10vh; /* Postavite visinu na 100vh da biste centrirali vertikalno */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    height:auto;
+  }
+  
+  .card {
+    flex: 1; /* Kartice će zauzimati jednaku širinu */
+    max-width: 28rem; /* Ograničenje maksimalne širine kartice */
+    place-items: center;
+  }
+  

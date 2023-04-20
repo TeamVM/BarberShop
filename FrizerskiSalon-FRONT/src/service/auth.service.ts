@@ -10,7 +10,7 @@ import { User } from 'src/models/User';
     providedIn: 'root'
 })
 export class AuthService {
-    baseUrl = environment.apiUrl + 'auth/';
+    baseUrl = environment.apiUrl + 'user/';
     jwtHelper = new JwtHelperService();
     decodedToken: any;
     currentUser!: User;
@@ -26,11 +26,8 @@ export class AuthService {
                     if (user) {
                         localStorage.setItem('token', user.token);
                         localStorage.setItem('user', JSON.stringify(user.user));
-                        localStorage.setItem('role', JSON.stringify(user.user.role));
-                        localStorage.setItem('username', JSON.stringify(user.user.username));
                         this.decodedToken = this.jwtHelper.decodeToken(user.token);
                         this.currentUser = user.user;
-                        this.currentRole = user.user.role;
                         this.router.navigate(['home']);
                     }
                 })
@@ -42,12 +39,21 @@ export class AuthService {
     }
 
     loggedIn() {
-        const token = localStorage.getItem('token');
+        let token = localStorage.getItem('token');
+        if (token) {
+            this.decodedToken = this.jwtHelper.decodeToken(token);
+
+        }
+
         return !this.jwtHelper.isTokenExpired(token);
     }
 
     isAdmin() {
-        const user = JSON.parse(localStorage.getItem('user') || '');
-        return user.role === 'Admin';
+        let token = localStorage.getItem('token');
+        if (token) {
+            let decodedToken = this.jwtHelper.decodeToken(token);
+            return decodedToken.role === 'Admin';
+        }
+        return false;
     }
 }

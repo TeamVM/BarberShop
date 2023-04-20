@@ -5,6 +5,8 @@ import { LoginComponent } from './login/login.component';
 import { PriceComponent } from './price/price.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { canActivate } from 'src/guards/auth.guard';
+import { ContactComponent } from './contact/contact.component';
+import { TermComponent } from './term/term.component';
 
 const routes: Routes = [
   {
@@ -24,6 +26,14 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+  },
+  {
+    path: 'term',
+    component: TermComponent,
   }
 ];
 

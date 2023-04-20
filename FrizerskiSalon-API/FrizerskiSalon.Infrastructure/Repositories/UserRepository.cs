@@ -5,6 +5,8 @@ using FrizerskiSalon.Infrastructure.Configuration;
 using FrizerskiSalon.Infrastructure.Models;
 using Microsoft.Extensions.Options;
 using Npgsql;
+using System.Data.SqlClient;
+using System.Threading;
 
 namespace FrizerskiSalon.Infrastructure.Repositories;
 
@@ -26,9 +28,10 @@ public class UserRepository : IUserRepository
         {
             Id = Guid.NewGuid(),
             Name = user.Name,
-            Surname = user.Surname,
+            Password = user.Password,
             Phone = user.Phone,
             Email = user.Email,
+            Role = "client",   
             // Za testiranje - obrisi kasnije ili dodaj logiku da dobavlja pravi BarberShopId
             BarberShopId = Guid.Parse("141795c2-d265-11ed-b69f-fb6f22e8114e")
         };
@@ -36,21 +39,46 @@ public class UserRepository : IUserRepository
         using var connection = new NpgsqlConnection(confugiration.Value.MyPostgresConnection);
         await connection.OpenAsync();
 
-        var sql = "INSERT INTO Users (id, name, surname, email, phone, barber_shop_id) " +
-                  "VALUES (@Id, @Name, @Surname, @Email, @Phone, @BarberShopId); ";
+        var sql = "INSERT INTO Users (id, name, password, email, phone, barber_shop_id, role) " +
+                  "VALUES (@Id, @Name, @Password, @Email, @Phone, @BarberShopId, @Role); ";
 
         var userId = Guid.NewGuid();
         var parameters = new
         {
             entity.Id,
             entity.Name,
-            entity.Surname,
+            entity.Password,
             entity.Email,
             entity.Phone,
             entity.BarberShopId,
+            entity.Role,
         };
 
         await connection.ExecuteAsync(sql, parameters);
         return userId;
      }
+
+    public async Task<UserModel> LoginUser(string email, string password)
+    {
+        try
+        {
+
+        using var connection = new NpgsqlConnection(confugiration.Value.MyPostgresConnection);
+        var query = @"
+            SELECT Id, Name, Password, Phone, Email, barber_shop_id, Role
+            FROM Users
+            WHERE Email = @Email AND Password = @Password
+        ";
+
+        var parameters = new { Email = email, Password = password };
+
+        return await connection.QuerySingleOrDefaultAsync<UserModel>(query, parameters);
+        }catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            return new UserModel();
+        }
+    }
+
 }
+

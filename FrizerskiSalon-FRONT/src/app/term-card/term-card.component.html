@@ -1,0 +1,31 @@
+
+    <div class="card" *ngIf="service && selectedDate">
+    <img src="../assets/img/makazice.jpg" class="card-img-top" alt="Slika 1">
+    <div class="card-body">
+        <h5 class="card-title">{{worker.name}}</h5>
+        <p class="card-text">{{service.duration}} minuta</p>
+
+        <h5>Slobodni termini:</h5>
+
+        <div style="max-width: 300px;">
+
+            <ng-container *ngFor="let term of service?.terms">
+                <p *ngIf="!term.booked" style="display: inline-block; margin-right: 10px;">
+
+                    <button (click)="bookTerm(term)">{{term.startTime |
+                        date:'shortTime'}}</button>
+                </p>
+            </ng-container>
+
+
+
+        </div>
+
+
+        <div>
+            <button class="btn btn-primary">Rezervisi</button>
+
+        </div>
+
+    </div>
+</div>

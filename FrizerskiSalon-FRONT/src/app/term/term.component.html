@@ -1,0 +1,18 @@
+<div class="dropdown-container">
+    Izaberite uslugu:
+    <select [(ngModel)]="selectedService">
+        <option [ngValue]="service" *ngFor="let service of services">
+            {{service.name}}</option>
+
+    </select>
+</div>
+<div *ngIf="selectedService"
+    style="display: flex; justify-content: center; align-items: center; font-size: x-large; text-decoration-color: crimson;">
+    Izaberite datum:<input type="date" [min]="minDate" [max]="maxDate" (change)="addTerms($event.target)">
+</div>
+<div class="card-container">
+
+    <app-term-card *ngFor="let worker of workers" [worker]="worker" [service]="selectedService"
+        [selectedDate]="selectedDateParent"></app-term-card>
+
+</div>

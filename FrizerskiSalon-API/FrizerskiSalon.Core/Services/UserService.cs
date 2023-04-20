@@ -14,4 +14,9 @@ public class UserService : IUserService
 
     public async Task<Guid> CreateUser(UserModel user) =>
         await userReository.CreateUser(user);
+
+    public async Task<UserModel?> LoginUser(string email, string password)
+    {
+        return await userReository.LoginUser(email, password);
+    }
 }

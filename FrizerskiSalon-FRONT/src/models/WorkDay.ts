@@ -1,4 +1,4 @@
-export class WorkDay{
+export interface WorkDay {
     workID: number;
     dateTime: Date;
     startTIme: string;

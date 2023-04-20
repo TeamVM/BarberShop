@@ -1,0 +1,14 @@
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* ili bilo koja druga visina koja vam odgovara */
+  }
+
+  
+.map-text {
+    text-align:center; /* opciono, za centriranje teksta */ 
+    font-size: x-large;
+    margin-top: 150px;
+  }
+

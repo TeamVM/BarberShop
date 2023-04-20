@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from 'src/service/auth.service';
 import { Router } from '@angular/router';
+import { catchError, finalize, tap, throwError } from 'rxjs';
 
 
 @Component({
@@ -18,15 +19,29 @@ export class RegistrationComponent {
   ngOnInit() {
   }
 
+
   register(form: NgForm) {
     if (this.isFormValid(form)) {
-      this.authService.register(this.model).subscribe(() => { 
-        this.authService.login(this.model).subscribe(() => { 
-          this.router.navigate(['register']);
-        });
-      }, error => {
-        console.error("Data is not valid.", error);
-      });
+      this.authService.register(this.model).pipe(
+        tap(() => {
+          this.authService.login(this.model).pipe(
+            tap(() => {
+              this.router.navigate(['register']);
+            }),
+            catchError(error => {
+              console.error('Login error:', error);
+              return throwError(error);
+            })
+          ).subscribe();
+        }),
+        catchError(error => {
+          console.error('Registration error:', error);
+          return throwError(error);
+        }),
+        finalize(() => {
+          // Ova funkcija se poziva kada se Observable završi ili kada dođe do greške
+        })
+      ).subscribe();
     }
   }
 
