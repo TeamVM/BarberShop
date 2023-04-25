@@ -5,6 +5,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { User } from 'src/models/User';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -13,29 +14,49 @@ export class AuthService {
     baseUrl = environment.apiUrl + 'user/';
     jwtHelper = new JwtHelperService();
     decodedToken: any;
-    currentUser!: User;
+    currentUser?: User;
     currentRole: string = '';
+
+    currentUserChanged = new Subject<User>();
 
     constructor(private http: HttpClient, private router: Router) { }
 
-    login(model: any) {
+    login(email: string, password: string): Observable<User> {
+
+        let model = {
+            email,
+            password
+        }
+
         return this.http.post(this.baseUrl + 'login', model)
             .pipe(
                 map((response: any) => {
-                    const user = response;
-                    if (user) {
-                        localStorage.setItem('token', user.token);
-                        localStorage.setItem('user', JSON.stringify(user.user));
-                        this.decodedToken = this.jwtHelper.decodeToken(user.token);
-                        this.currentUser = user.user;
+                    if (response) {
+                        localStorage.setItem('token', response.token);
+                        localStorage.setItem('user', JSON.stringify(response.user));
+                        this.decodedToken = this.jwtHelper.decodeToken(response.token);
+                        this.currentUser = response.user;
                         this.router.navigate(['home']);
                     }
+                    this.currentUserChanged.next(this.currentUser);
+                    return this.currentUser;
                 })
             );
     }
 
     register(model: any) {
         return this.http.post(this.baseUrl + 'register', model);
+    }
+
+    logout() {
+        this.decodedToken = null;
+        this.currentUser = null;
+        this.currentRole = null;
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        localStorage.removeItem('role');
+        localStorage.removeItem('email');
+        this.currentUserChanged.next(null);
     }
 
     loggedIn() {

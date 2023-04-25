@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FrizerskiSalon.Core.Interfaces
 {
-    public interface ITermRepository
+    public interface ITermService
     {
         Task<Guid> CreateTerm(Term term);
         Task<bool> UnreserveTerm(Guid termId);

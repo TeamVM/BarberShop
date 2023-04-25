@@ -12,6 +12,7 @@ namespace FrizerskiSalon.Infrastructure.Repositories;
 
 public class UserRepository : IUserRepository
 {
+
     private readonly IOptions<ConnectionConfiguration> confugiration;
 
     public UserRepository(IOptions<ConnectionConfiguration> confugiration)

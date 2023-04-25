@@ -13,7 +13,7 @@ export class ContactComponent {
     center: latLng(45.25849, 19.84205)
   };
 
-  layers = [];
+
 
   onMapReady(map: Map) {
     const marker = new Marker([45.25849, 19.84205]).addTo(map);

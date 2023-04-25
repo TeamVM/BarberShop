@@ -123,7 +123,7 @@ namespace FrizerskiSalon.Infrastructure.Repositories
             return affectedRows > 0;
         }
 
-        public async Task<List<Term>> GetAvaliableTerms(Guid barberShopId, DateTime dateTime)
+        public async Task<List<Term>> GetAvaliableTerms(Guid barberShopId, DateTime dateTime, Guid serviceId)
         {
             using var connection = new NpgsqlConnection(confugiration.Value.MyPostgresConnection);
             await connection.OpenAsync();
@@ -171,5 +171,8 @@ namespace FrizerskiSalon.Infrastructure.Repositories
 
             return duration;
         }
+
+
+        //public async Task<>
     }
 }

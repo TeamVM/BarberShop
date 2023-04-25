@@ -8,6 +8,4 @@ public interface IUserService
 
     public Task<UserModel?> LoginUser(string email, string password);
 
-    Task<bool> ReserveTerm(Guid userId, Guid termId, Guid serviceId, int xmin);
-
 }

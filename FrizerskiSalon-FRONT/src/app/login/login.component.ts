@@ -12,7 +12,7 @@ export class LoginComponent {
   constructor(private authService: AuthService) { }
 
   login() {
-    this.authService.login(this.model).subscribe(next => {
+    this.authService.login(this.model.email, this.model.password).subscribe(next => {
       console.log('Logged in successfully!');
 
     }, error => {

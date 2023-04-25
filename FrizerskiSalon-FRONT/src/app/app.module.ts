@@ -15,6 +15,7 @@ import { TermComponent } from './term/term.component';
 import { ContactComponent } from './contact/contact.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { TermCardComponent } from './term-card/term-card.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { TermCardComponent } from './term-card/term-card.component';
     TermComponent,
     ContactComponent,
     TermCardComponent,
+    NavbarComponent,
   ],
   imports: [
     LeafletModule,

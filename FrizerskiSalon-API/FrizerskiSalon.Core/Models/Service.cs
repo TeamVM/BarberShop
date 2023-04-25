@@ -9,7 +9,7 @@ namespace FrizerskiSalon.Core.Models
     public class Service
     {
         public Guid ServiceID { get; set; }
-        public string Name { get; set; }
+        public string?  Name { get; set; }
         public int Duration { get; set; }
         public float Price { get; set; }
 

@@ -1,4 +1,5 @@
 using FrizerskiSalon.Core.Interfaces;
+using FrizerskiSalon.Core.Models;
 using FrizerskiSalon.Core.Services;
 using FrizerskiSalon.Infrastructure.Configuration;
 using FrizerskiSalon.Infrastructure.Repositories;
@@ -10,9 +11,15 @@ var builder = WebApplication.CreateBuilder(args);
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 // Add services to the container.
 builder.Services.Configure<ConnectionConfiguration>(builder.Configuration.GetSection("ConnectionStrings")); //citanje connectionstringa iz appsetings.json
-builder.Services.Configure<AppConfig>(builder.Configuration.GetSection("AppConfig"));
-builder.Services.AddScoped<IUserService, UserService>();
+//builder.Services.Configure<AppConfig>(builder.Configuration.GetSection("AppConfig"));
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
+
+builder.Services.AddSingleton<ITermRepository, TermRepository>();
+builder.Services.AddSingleton<ITermService, TermService>();    
+
+
+
 builder.Services.AddControllers();
 
 
@@ -36,8 +43,6 @@ builder.Services.AddCors(options =>
             .SetIsOriginAllowedToAllowWildcardSubdomains();
         });
 });
-
-
 
 var app = builder.Build();
 

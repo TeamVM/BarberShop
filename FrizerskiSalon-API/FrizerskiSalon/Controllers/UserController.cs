@@ -1,5 +1,6 @@
 ﻿using FrizerskiSalon.Core.Interfaces;
 using FrizerskiSalon.Core.Models;
+using FrizerskiSalon.Core.Services;
 using FrizerskiSalon.Models.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -15,10 +16,12 @@ public class UserController : ControllerBase
 {
 
     private readonly IUserService userService;
+    private readonly ITermService termService;
 
-    public UserController(IUserService userService)
+    public UserController(IUserService userService, ITermService termService)
     {
-        this.userService = userService; 
+        this.userService = userService;
+        this.termService = termService; 
     }
 
     [HttpPost("register")]
@@ -58,7 +61,7 @@ public class UserController : ControllerBase
         var claims = new[]
         {
             new Claim(ClaimTypes.NameIdentifier, userFromRepo.Email),
-            new Claim(ClaimTypes.Role, userFromRepo.Role)
+            new Claim(ClaimTypes.Role, userFromRepo.Password)
         };
 
         var key = new SymmetricSecurityKey(Encoding.UTF8
@@ -90,7 +93,7 @@ public class UserController : ControllerBase
         {
             if (term.UserId.HasValue && term.ServiceID.HasValue)
             {
-                bool success = await userService.ReserveTerm(
+                bool success = await termService.ReserveTerm(
                     term.UserId.Value,
                     term.TermID,
                     term.ServiceID.Value,

@@ -41,15 +41,30 @@ export class TermComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Postavljanje minimalnog datuma na trenutni dan + 1 dan
     const currentDate = new Date();
-    this.minDate = currentDate.toISOString().split('T')[0];
+    const currentDayOfWeek = currentDate.getDay();
+
+    // Postavljanje minimalnog datuma
+    let minDate;
+    if (currentDayOfWeek === 0) {
+      // Ako je trenutni dan nedjelja, postavljamo minimalni datum na ponedjeljak
+      const daysUntilMonday = 1;
+      const minDateMonday = new Date(currentDate);
+      minDateMonday.setDate(currentDate.getDate() + daysUntilMonday);
+      minDate = minDateMonday.toISOString().split('T')[0];
+    } else {
+      // Inače, postavljamo minimalni datum na trenutni dan
+      minDate = currentDate.toISOString().split('T')[0];
+    }
 
     // Postavljanje maksimalnog datuma na trenutni dan + broj dana do subote
-    const daysUntilSaturday = (6 - currentDate.getDay()) % 7;
+    const daysUntilSaturday = (6 - currentDayOfWeek) % 7;
     const maxDate = new Date(currentDate);
     maxDate.setDate(currentDate.getDate() + daysUntilSaturday);
-    this.maxDate = maxDate.toISOString().split('T')[0];
+    const maxDateString = maxDate.toISOString().split('T')[0];
+
+    this.minDate = minDate;
+    this.maxDate = maxDateString;
 
   }
 

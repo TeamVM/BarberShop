@@ -24,7 +24,7 @@ export class RegistrationComponent {
     if (this.isFormValid(form)) {
       this.authService.register(this.model).pipe(
         tap(() => {
-          this.authService.login(this.model).pipe(
+          this.authService.login(this.model.email, this.model.password).pipe(
             tap(() => {
               this.router.navigate(['register']);
             }),
