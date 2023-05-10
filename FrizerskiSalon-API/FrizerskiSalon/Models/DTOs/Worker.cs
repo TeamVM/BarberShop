@@ -2,15 +2,11 @@
 {
     public class Worker
     {
-        public long workerID { get; set; }
-        public string name { get; set; }
-        public string surname { get; set; }
-        public int jmbg { get; set; }
+        public Guid WorkerId { get; set; }
+        public string Name { get; set; }
 
-        public string img { get; set; }
+        public string Img { get; set; }
 
-        public long barberShopID { get; set; }
-
-
+        public long BarberShopID { get; set; }
     }
 }

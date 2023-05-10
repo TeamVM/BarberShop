@@ -1,12 +1,11 @@
 ﻿using Dapper;
-using FrizerskiSalon.Core.Interfaces;
 using FrizerskiSalon.Core.Models;
 using FrizerskiSalon.Infrastructure.Configuration;
 using FrizerskiSalon.Infrastructure.Models;
 using Microsoft.Extensions.Options;
 using Npgsql;
-using System.Data.SqlClient;
-using System.Threading;
+
+
 
 namespace FrizerskiSalon.Infrastructure.Repositories;
 
@@ -22,9 +21,6 @@ public class UserRepository : IUserRepository
 
     public async Task<Guid> CreateUser(UserModel user)
     {
-        // Logika za dobavljanje barber_shop_id-a
-        // var barberShopId = await GetBarberShopIdFromDb();
-
         var entity = new DMUser()
         {
             Id = Guid.NewGuid(),

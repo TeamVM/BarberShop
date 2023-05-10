@@ -18,6 +18,6 @@
 
         public Guid WorkerID { get; set; }
 
-        public int Xmin { get; set; }
+        public int Xmins { get; set; }
     }
 }
