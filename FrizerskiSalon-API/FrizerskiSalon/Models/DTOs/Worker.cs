@@ -7,6 +7,6 @@
 
         public string Img { get; set; }
 
-        public long BarberShopID { get; set; }
+        public Guid BarberShopID { get; set; }
     }
 }
